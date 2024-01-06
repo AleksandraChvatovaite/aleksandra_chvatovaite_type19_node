@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const morgan = require('morgan');
 const cors = require('cors');
+const testConnection = require('./routes/v1/testRoutes');
 
 const app = express();
 
@@ -16,6 +17,9 @@ app.get('/', (req, res) => {
   res.json('Hello World');
 });
 
+// Use routes
+
+testConnection();
 // connect
 
 app.listen(PORT, () => {
