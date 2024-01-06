@@ -1,4 +1,15 @@
 GET http://localhost:3000
 
+### POST to auth register
+POST http://localhost:3000/v1/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Monica Belucci",
+  "email": "monicaBel@gmail.com",
+  "password": "Monika123",
+  "roleId": "1"
+}
+
 ###
 
