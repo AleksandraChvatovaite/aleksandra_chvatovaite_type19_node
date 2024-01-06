@@ -3,6 +3,7 @@ const express = require('express');
 const morgan = require('morgan');
 const cors = require('cors');
 const usersRouter = require('./routes/v1/usersRoutes');
+const shopItemRouter = require('./routes/v1/shopItemsRoutes');
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.get('/', (req, res) => {
 
 // Use routes
 app.use('/v1/api', usersRouter);
+app.use('v1/api/', shopItemRouter);
 
 // connect
 
