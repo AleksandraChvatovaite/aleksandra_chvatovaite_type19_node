@@ -11,5 +11,14 @@ Content-Type: application/json
   "roleId": "1"
 }
 
+### login to auth/login
+POST http://localhost:3000/v1/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "monicaBel@gmail.com",
+  "password": "Monika123"
+}
+
 ###
 

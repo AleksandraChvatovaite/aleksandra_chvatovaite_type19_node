@@ -3,7 +3,6 @@ const express = require('express');
 const morgan = require('morgan');
 const cors = require('cors');
 const usersRouter = require('./routes/v1/usersRoutes');
-const testConnection = require('./routes/v1/testRoutes');
 
 const app = express();
 
@@ -20,8 +19,6 @@ app.get('/', (req, res) => {
 
 // Use routes
 app.use('/v1/api', usersRouter);
-
-testConnection();
 
 // connect
 

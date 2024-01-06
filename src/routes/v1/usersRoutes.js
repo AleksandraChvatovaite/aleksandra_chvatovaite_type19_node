@@ -27,4 +27,27 @@ usersRouter.post('/auth/register', async (req, res) => {
   res.status(400).json('no rows affected');
 });
 
+// POST /v1/api/auth/login - prisijungti vartotoja naudojant email ir password
+usersRouter.post('/auth/login', async (req, res) => {
+  const { email, password } = req.body;
+  const argArr = [email, password];
+
+  const sql = `SELECT * FROM ${tableName} WHERE email = ? AND password = ?`;
+  const [selectResult, error] = await dbQueryWithData(sql, argArr);
+
+  if (error) {
+    console.log('error ===', error);
+    res.status(500).json('Server error');
+    return;
+  }
+
+  if (selectResult.length === 1) {
+    // Vartotojas su tokiu el. paštu ir slaptažodžiu rastas
+    res.status(200).json('Login successful');
+  } else {
+    // Vartotojas su tokiu el. paštu ir slaptažodžiu nerastas
+    res.status(401).json('Invalid email or password');
+  }
+});
+
 module.exports = usersRouter;
