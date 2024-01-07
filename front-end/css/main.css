@@ -10,17 +10,15 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-.form-wrap {
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+h1 {
+  padding: 1.5rem 0;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .login-form {
+  margin-left: auto;
+  margin-right: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,8 +43,9 @@ button {
   background-color: #FF834F;
   border: none;
   border-radius: 5px;
+  font-size: 1.2rem;
 }
 
 button:hover {
-  background-color: #1D1D1D;
+  background-color: #cf3d00;
 }/*# sourceMappingURL=main.css.map */

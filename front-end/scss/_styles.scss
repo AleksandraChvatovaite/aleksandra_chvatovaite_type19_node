@@ -1,10 +1,6 @@
-.form-wrap {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-}
-
 .login-form {
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: column;
   width: 300px;
@@ -16,6 +12,7 @@ input {
   margin: 5px 0;
   height: 35px;
   padding: 7px;
+  // background-color: lighten($color: $background-color, $amount: 25%);
 }
 
 button {
@@ -24,8 +21,9 @@ button {
   background-color: $secondary-color;
   border: none;
   border-radius: 5px;
+  font-size: 1.2rem;
 }
 
 button:hover {
-  background-color: $primary-color;
+  background-color: darken($color: $secondary-color, $amount: 25%);
 }
