@@ -1,27 +1,52 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-size: 1rem;
 }
 
 body {
-  margin: 0;
   background-color: #F8F7E5;
   color: #1D1D1D;
   font-family: "Inter", sans-serif;
 }
 
-.container {
-  padding: 2rem 2rem 0;
+.form-wrap {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-h1 {
-  text-align: center;
+.login-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 300px;
+  padding: 15px;
+  border: 1px solid #FF834F;
 }
 
-form {
-  border: 1px solid #1D1D1D;
-  border-radius: 0.5rem;
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto;
+input {
+  margin: 5px 0;
+  height: 35px;
+  padding: 7px;
+}
+
+button {
+  height: 35px;
+  margin: 5px 0;
+  background-color: #FF834F;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #1D1D1D;
 }/*# sourceMappingURL=main.css.map */
