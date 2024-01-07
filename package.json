@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "description": "04_node_put_delete_transformation",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
     "lintf": "eslint src --fix"
   },
   "keywords": [],
-  "author": "Marius K.",
+  "author": "Aleksandra Ch.",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",

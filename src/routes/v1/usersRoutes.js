@@ -30,23 +30,26 @@ usersRouter.post('/auth/register', async (req, res) => {
 // POST /v1/api/auth/login - prisijungti vartotoja naudojant email ir password
 usersRouter.post('/auth/login', async (req, res) => {
   const { email, password } = req.body;
-  const argArr = [email, password];
 
-  const sql = `SELECT * FROM ${tableName} WHERE email = ? AND password = ?`;
-  const [selectResult, error] = await dbQueryWithData(sql, argArr);
+  const sql = `SELECT * FROM ${tableName} WHERE email = ?`;
+  const [rows, error] = await dbQueryWithData(sql, [email]);
 
-  if (error) {
-    console.log('error ===', error);
-    res.status(500).json('Server error');
+  if (rows.length === 0) {
+    res.status(400).json({
+      msg: 'Incorrect email',
+    });
     return;
   }
-
-  if (selectResult.length === 1) {
-    // Vartotojas su tokiu el. paštu ir slaptažodžiu rastas
-    res.status(200).json('Login successful');
-  } else {
-    // Vartotojas su tokiu el. paštu ir slaptažodžiu nerastas
-    res.status(401).json('Invalid email or password');
+  if (rows.length === 1) {
+    if (password !== rows[0].password) {
+      res.status(400).json({
+        msg: 'Incorrect password',
+      });
+      return;
+    }
+    res.json({
+      msg: 'Login success',
+    });
   }
 });
 
