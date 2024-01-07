@@ -7,6 +7,7 @@ const tableName = 'users';
 
 // POST /v1/api/auth/register registruoti vartotoja su name, email, password, role_id;
 usersRouter.post('/auth/register', async (req, res) => {
+  // eslint-disable-next-line object-curly-newline
   const { name, email, password, roleId } = req.body;
   const argArr = [name, email, password, roleId];
 
@@ -34,15 +35,17 @@ usersRouter.post('/auth/login', async (req, res) => {
   const sql = `SELECT * FROM ${tableName} WHERE email = ?`;
   const [rows, error] = await dbQueryWithData(sql, [email]);
 
+  console.log(error);
+
   if (rows.length === 0) {
-    res.status(400).json({
+    res.status(401).json({
       msg: 'Incorrect email',
     });
     return;
   }
   if (rows.length === 1) {
     if (password !== rows[0].password) {
-      res.status(400).json({
+      res.status(401).json({
         msg: 'Incorrect password',
       });
       return;
