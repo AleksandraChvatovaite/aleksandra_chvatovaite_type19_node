@@ -27,5 +27,4 @@ shopItemRouter.post('/pets', async (req, res) => {
   res.status(400).json('no rows affected');
 });
 
-
 module.exports = shopItemRouter;

@@ -39,14 +39,14 @@ usersRouter.post('/auth/login', async (req, res) => {
 
   if (rows.length === 0) {
     res.status(401).json({
-      msg: 'Incorrect email',
+      msg: 'Incorrect email or password',
     });
     return;
   }
   if (rows.length === 1) {
     if (password !== rows[0].password) {
       res.status(401).json({
-        msg: 'Incorrect password',
+        msg: 'Incorrect email or password',
       });
       return;
     }
