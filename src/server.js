@@ -4,6 +4,7 @@ const morgan = require('morgan');
 const cors = require('cors');
 const usersRouter = require('./routes/v1/usersRoutes');
 const shopItemRouter = require('./routes/v1/shopItemsRoutes');
+const testConnection = require('./routes/v1/testRoutes');
 
 const app = express();
 
@@ -20,9 +21,10 @@ app.get('/', (req, res) => {
 
 // Use routes
 app.use('/v1/api', usersRouter);
-app.use('v1/api/', shopItemRouter);
+app.use('/v1/api', shopItemRouter);
 
 // connect
+// testConnection();
 
 app.listen(PORT, () => {
   console.log(`Server runing on http://localhost:${PORT}`);

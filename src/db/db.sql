@@ -18,6 +18,9 @@ CREATE TABLE `shop_items` (
   `item_type_id` INT UNSIGNED
 ) ENGINE = InnoDB;
 
+-- prideti prie shop items isArchived
+ALTER TABLE `shop_items` ADD `isArchived` BOOLEAN NOT NULL DEFAULT FALSE AFTER `item_type_id`;
+
 -- item_types su laukais: id, name
 CREATE TABLE item_types (
   `item_type_id` int UNSIGNED PRIMARY KEY AUTO_INCREMENT,
@@ -39,3 +42,8 @@ CREATE TABLE user_roles (
   `user_roles_id` int UNSIGNED PRIMARY KEY AUTO_INCREMENT,
   `user_roles_name` varchar(255) NOT NULL
 )
+
+-- insert into shop_items
+INSERT INTO `shop_items` (`shop_item_id`, `shop_item_name`, `price`, `description`, `image`, `item_type_id`) VALUES (NULL, 'Bracelet', '259.00', 'Gold bracelet with a diamond', 'https://auksomeistrai.lt/image/cache/catalog/APYRANKES/balto-aukso-apyranke-grandinele-su-briliantu-0,03-600x600.jpg', NULL);
+
+INSERT INTO `item_types` (`item_type_id`, `item_type_name`) VALUES (NULL, 'jewelry'), (NULL, 'clothes'), (NULL, 'accessories'), (NULL, 'shoes')
