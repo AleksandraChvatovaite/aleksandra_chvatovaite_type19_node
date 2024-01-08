@@ -20,5 +20,26 @@ Content-Type: application/json
   "password": "Monika123"
 }
 
-###
+### POST to shop items
+POST http://localhost:3000/v1/api/shop_items
+Content-Type: application/json
 
+{
+  "name": "Pendant",
+  "price": "3759",
+  "description": "White gold pendant with diamonds",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRprwK6e1NMYP0_O1vdw84Y29uWh_tyBHTiIx_NbolLFfCkX6Lct0niavPpfyMZR4jOuUM&usqp=CAU",
+  "itemTypeId": "1"
+}
+
+### GET all from shop items
+
+GET http://localhost:3000/v1/api/shop_items
+
+### GET from shop_items kur id 
+GET http://localhost:3000/v1/api/shop_items/itemId/1
+
+### DELETE or change isArchived to shop item
+DELETE  http://localhost:3000/v1/api/shop_items/itemId/1
+
+### 
