@@ -1,12 +1,13 @@
 const express = require('express');
 const { dbQueryWithData } = require('../../helper');
+const { checkusersBody } = require('../../middleware');
 
 const usersRouter = express.Router();
 
 const tableName = 'users';
 
 // POST /v1/api/auth/register registruoti vartotoja su name, email, password, role_id;
-usersRouter.post('/auth/register', async (req, res) => {
+usersRouter.post('/auth/register', checkusersBody, async (req, res) => {
   // eslint-disable-next-line object-curly-newline
   const { name, email, password, roleId } = req.body;
   const argArr = [name, email, password, roleId];

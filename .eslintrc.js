@@ -23,6 +23,6 @@ module.exports = {
   rules: {
     'no-console': 'off',
     'linebreak-style': 'off',
-    'no-use-before-define': 'off',
+    'no-use-before-define': 'off'
   },
 };

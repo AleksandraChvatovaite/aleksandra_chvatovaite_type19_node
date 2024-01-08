@@ -35,3 +35,5 @@ async function loginToServer(event) {
     console.log('User data stored in local storage');
   }
 }
+
+// reikia kad jei isjungi browser issitrintu local storage
