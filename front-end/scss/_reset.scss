@@ -11,6 +11,18 @@ body {
 
 ul {
   list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+a{
+  color: $primary-color;
+  text-decoration: inherit;
+}
+
+p,
+h3 {
+  margin: 0;
 }
 
 li {

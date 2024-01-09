@@ -30,7 +30,7 @@ shopItemRouter.post('/shop_items', checkShopItemBody, async (req, res) => {
 
 // GET /api/shop_items gaus visus
 shopItemRouter.get('/shop_items', async (req, res) => {
-  const sql = `SELECT * FROM ${tableName} WHERE isArchived = 0`;
+  const sql = `SELECT * FROM ${tableName} WHERE is_archived = 0`;
   const [shopItems, error] = await dbQueryWithData(sql);
 
   if (error) {

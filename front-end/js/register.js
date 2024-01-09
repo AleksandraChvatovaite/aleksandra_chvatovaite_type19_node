@@ -34,6 +34,9 @@ getUserRoles().then((response) => {
 });
 
 function createRadioInput(option, index) {
+  const inputBlock = document.createElement('div');
+  inputBlock.classList.add('input-block');
+
   const roleInput = document.createElement('input');
   roleInput.setAttribute('type', 'radio');
   roleInput.setAttribute('id', `role-${index}`);
@@ -44,6 +47,8 @@ function createRadioInput(option, index) {
   label.setAttribute('for', `role-${index}`);
   label.textContent = option;
 
-  els.radioDiv.append(roleInput);
-  els.radioDiv.append(label);
+  inputBlock.append(roleInput);
+  inputBlock.append(label);
+
+  els.radioDiv.append(inputBlock);
 }

@@ -1,0 +1,21 @@
+.shop-items-wrap {
+  margin: 4rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.shop-item {
+  width:30%;
+  border: 1px solid $primary-color;
+  padding: 0.3rem 0.4rem;
+}
+
+.btn-wrap {
+  display: flex;
+}
+
+.btn-shop {
+  font-size: 1rem;
+}

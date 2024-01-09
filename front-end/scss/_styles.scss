@@ -1,26 +1,22 @@
-header {
-  border: 1px solid salmon;
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .nav-links,
 .log-unlog-nav {
   display: flex;
 }
 
-.login-form {
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  padding: 15px;
-  border: 1px solid $secondary-color;
+a {
+  padding: 0.8rem 1rem;
+  font-size: 1.2rem;
 }
 
 input {
   margin: 5px 0;
   height: 35px;
   padding: 7px;
-  // background-color: lighten($color: $background-color, $amount: 25%);
 }
 
 button {
@@ -40,4 +36,8 @@ div#error {
   text-align: center;
   color: rgb(182, 6, 6);
   padding-top: 2rem;
+}
+
+.active {
+  color: $secondary-color;
 }

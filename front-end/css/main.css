@@ -12,6 +12,18 @@ body {
 
 ul {
   list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+a {
+  color: #1D1D1D;
+  text-decoration: inherit;
+}
+
+p,
+h3 {
+  margin: 0;
 }
 
 li {
@@ -24,8 +36,16 @@ h1 {
   text-align: center;
 }
 
-header {
-  border: 1px solid salmon;
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .nav-links,
@@ -35,19 +55,9 @@ header {
   display: flex;
 }
 
-.login-form {
-  margin-left: auto;
-  margin-right: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 300px;
-  padding: 15px;
-  border: 1px solid #FF834F;
+a {
+  padding: 0.8rem 1rem;
+  font-size: 1.2rem;
 }
 
 input {
@@ -73,4 +83,76 @@ div#error {
   text-align: center;
   color: rgb(182, 6, 6);
   padding-top: 2rem;
+}
+
+.active {
+  color: #FF834F;
+}
+
+.shop-items-wrap {
+  margin: 4rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.shop-item {
+  width: 30%;
+  border: 1px solid #1D1D1D;
+  padding: 0.3rem 0.4rem;
+}
+
+.btn-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.btn-shop {
+  font-size: 1rem;
+}
+
+.login-form,
+.register-form {
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 300px;
+  padding: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.radio-input-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.input-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }/*# sourceMappingURL=main.css.map */
