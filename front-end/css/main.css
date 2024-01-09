@@ -10,10 +10,29 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+ul {
+  list-style: none;
+}
+
+li {
+  color: #1D1D1D;
+}
+
 h1 {
   padding: 1.5rem 0;
   font-size: 2rem;
   text-align: center;
+}
+
+header {
+  border: 1px solid salmon;
+}
+
+.nav-links,
+.log-unlog-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .login-form {

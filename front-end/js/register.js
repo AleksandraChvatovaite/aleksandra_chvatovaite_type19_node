@@ -30,7 +30,6 @@ getUserRoles().then((response) => {
   userRolesArr.forEach((roleObj, index) => {
     const role = roleObj.user_roles_name;
     createRadioInput(role, index);
-    console.log('role ===', role);
   });
 });
 
@@ -45,6 +44,6 @@ function createRadioInput(option, index) {
   label.setAttribute('for', `role-${index}`);
   label.textContent = option;
 
-  document.body.append(roleInput);
-  document.body.append(label);
+  els.radioDiv.append(roleInput);
+  els.radioDiv.append(label);
 }

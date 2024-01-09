@@ -9,6 +9,14 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+ul {
+  list-style: none;
+}
+
+li {
+  color: $primary-color;
+}
+
 h1 {
   padding: 1.5rem 0;
   font-size: 2rem;
