@@ -5,15 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/main.css">
   <title>Register</title>
-  <script src="js/register.js" type="module" defer></script>
+  <script src="js/register.js" type="module"></script>
 </head>
 <body>
   <header>
     <nav class="main-nav">
       <ul class="nav-links">
         <li><a href="shop.html">SHOP</a></li>
-        <li><a href="add-item.html">Add Item</a></li>
-        <li><a href="orders.html">Order</a></li>
+        <li><a href="orders.html">Orders</a></li>
       </ul>
       <ul class="log-unlog-nav">
         <li><a href="login.html">Login</a></li>
@@ -25,11 +24,13 @@
     <h1>Register</h1>
     <form id="register-form" class="register-form">
       <input type="text" for="name" placeholder="Your Name" id="name">
+      <input type="text" for="email" placeholder="email@email.com" id="email">
       <input type="text" for="password" placeholder="Type Password" id="password">
       <input type="text" for="password" placeholder="Re-enter Password" id="repasword">
       <div class="radio-input-block" id="radio-input-block"></div>
-      <button type="submit">Register</button>
+      <button type="submit" id="register">Register</button>
     </form>
+    <div id="error"></div>
   </div>
 </body>
 </html>

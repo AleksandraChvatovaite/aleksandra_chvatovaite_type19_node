@@ -5,24 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/main.css">
   <title>Document</title>
-  <script src="js/add-item.js" defer></script>
+  <script src="js/add-item.js" type="module"></script>
 </head>
 <body>
   <header>
     <nav class="main-nav">
       <ul class="nav-links">
         <li><a href="shop.html">SHOP</a></li>
-        <li><a href="add-item.html" class="active">Add Item</a></li>
-        <li><a href="orders.html">Order</a></li>
-      </ul>
-      <ul class="log-unlog-nav">
-        <li><a href="login.html">Login</a></li>
-        <li><a href="register.html">Register</a></li>
+        <li><a href="orders.html">Orders</a></li>
       </ul>
     </nav>
   </header>
   <div class="container">
-
+    <form>
+      <input type="text" for="item-name" placeholder="Item Name" id="item-name">
+      <input type="text" for="price" placeholder="Price" id="price">
+      <textarea name="description" id="description" cols="30" rows="10" placeholder="Description"></textarea>
+      <input type="text" for="img-url" placeholder="Place Your Image URL" id="img-url">
+      <select name="cars" id="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+    </form>
   </div>
 </body>
 </html>

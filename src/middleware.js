@@ -49,7 +49,7 @@ async function checkShopItemBody(req, res, next) {
   }
 }
 
-async function checkusersBody(req, res, next) {
+async function checkUsersBody(req, res, next) {
   const orderSchema = Joi.object({
     name: Joi.string().min(3).max(255).required(),
     email: Joi.string().email({ minDomainSegments: 2 }).required(),
@@ -72,5 +72,5 @@ async function checkusersBody(req, res, next) {
 module.exports = {
   checkOrderBody,
   checkShopItemBody,
-  checkusersBody,
+  checkUsersBody,
 };

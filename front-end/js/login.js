@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/extensions
 import { fetchData, loginUrl } from './modules/helper.js';
 
-console.log('login.js file was loaded');
+console.log('login.js file was loaded 123');
 
 const els = {
   formEl: document.querySelector('form'),
@@ -12,9 +12,9 @@ const els = {
 
 els.formEl.addEventListener('submit', loginToServer);
 
-window.addEventListener('beforeunload', () => {
-  localStorage.removeItem('loggedInUser');
-});
+// window.addEventListener('beforeunload', () => {
+//   localStorage.removeItem('loggedInUser');
+// });
 
 async function loginToServer(event) {
   event.preventDefault();
@@ -37,7 +37,10 @@ async function loginToServer(event) {
   }
   if (response.msg === 'Login success') {
     // Store user information in local storage
-    localStorage.setItem('loggedInUser', JSON.stringify({ email: data.email }));
+    // localStorage.setItem('loggedInUser',
+    // JSON.stringify({ email: data.email, role: response.userRole }));
+    localStorage.setItem('loggedInUserEmail', data.email);
+    localStorage.setItem('loggedInUserRole', response.userRole);
     console.log('User data stored in local storage');
     window.location = 'shop.html';
   }

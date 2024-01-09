@@ -1,16 +1,30 @@
 const express = require('express');
 const { dbQueryWithData } = require('../../helper');
-const { checkusersBody } = require('../../middleware');
+const { checkUsersBody } = require('../../middleware');
 
 const usersRouter = express.Router();
 
 const tableName = 'users';
 
 // POST /v1/api/auth/register registruoti vartotoja su name, email, password, role_id;
-usersRouter.post('/auth/register', checkusersBody, async (req, res) => {
+usersRouter.post('/auth/register', checkUsersBody, async (req, res) => {
   // eslint-disable-next-line object-curly-newline
   const { name, email, password, roleId } = req.body;
   const argArr = [name, email, password, roleId];
+
+  const sqlCheck = `SELECT COUNT(*) FROM ${tableName} WHERE email = ?`;
+  const [checkResultObj, checkError] = await dbQueryWithData(sqlCheck, [email]);
+
+  if (checkError) {
+    res.status(500).json('Server error');
+    return;
+  }
+
+  if (checkResultObj[0]['COUNT(*)'] > 0) {
+    res.status(400).json('User already exists');
+    // reikia suzinoti kaip grazinti zinute su klaida is cia
+    return;
+  }
 
   const sql = `INSERT INTO ${tableName} (name, email, password, role_id) VALUES (?,?,?,?)`;
 
@@ -33,7 +47,8 @@ usersRouter.post('/auth/register', checkusersBody, async (req, res) => {
 usersRouter.post('/auth/login', async (req, res) => {
   const { email, password } = req.body;
 
-  const sql = `SELECT * FROM ${tableName} WHERE email = ?`;
+  // const sql = `SELECT * FROM ${tableName} WHERE email = ?`;
+  const sql = `SELECT ${tableName}.email, ${tableName}.password, user_roles.user_roles_name FROM ${tableName} JOIN user_roles ON ${tableName}.role_id = user_roles.user_roles_id WHERE ${tableName}.email=?`;
   const [rows, error] = await dbQueryWithData(sql, [email]);
 
   console.log(error);
@@ -53,6 +68,7 @@ usersRouter.post('/auth/login', async (req, res) => {
     }
     res.json({
       msg: 'Login success',
+      userRole: rows[0].user_roles_name,
     });
   }
 });

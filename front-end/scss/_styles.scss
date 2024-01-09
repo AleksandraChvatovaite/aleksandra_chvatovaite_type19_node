@@ -26,6 +26,7 @@ button {
   border: none;
   border-radius: 5px;
   font-size: 1.2rem;
+  cursor: pointer;
 }
 
 button:hover {
@@ -40,4 +41,13 @@ div#error {
 
 .active {
   color: $secondary-color;
+}
+
+.btn-wrap {
+  display: flex;
+  justify-content: space-around;
+}
+
+.log-unlog-nav li {
+  cursor: pointer;
 }
