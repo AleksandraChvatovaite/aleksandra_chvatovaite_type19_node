@@ -4,10 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/main.css">
-  <title>Document</title>
-  <script src="js/register.js" defer></script>
+  <title>Register</title>
+  <script src="js/register.js" type="module" defer></script>
 </head>
 <body>
-  
+  <div class="container">
+    <form id="register-form">
+        <h1>Register</h1>
+        <input type="text" for="name" placeholder="Your Name" id="name">
+        <input type="text" for="password" placeholder="Type Password" id="password">
+        <input type="text" for="password" placeholder="Re-enter Password" id="repasword">
+        <div id="radio-input-block"></div>
+        <button type="submit">Register</button>
+    </form>
+  </div>
 </body>
 </html>

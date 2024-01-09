@@ -48,4 +48,10 @@ button {
 
 button:hover {
   background-color: #cf3d00;
+}
+
+div#error {
+  text-align: center;
+  color: rgb(182, 6, 6);
+  padding-top: 2rem;
 }/*# sourceMappingURL=main.css.map */
