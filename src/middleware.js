@@ -73,4 +73,5 @@ module.exports = {
   checkOrderBody,
   checkShopItemBody,
   checkUsersBody,
+  formatErrorArr,
 };

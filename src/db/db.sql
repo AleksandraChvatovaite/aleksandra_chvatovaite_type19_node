@@ -5,8 +5,7 @@ CREATE TABLE `users` (
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `role_id` int UNSIGNED NOT NULL,
-) ENGINE = InnoDB;
+  `role_id` int UNSIGNED NOT NULL)
 
 -- shop_items su laukais: id_name, price, description, image, item_type_id
 CREATE TABLE `shop_items` (

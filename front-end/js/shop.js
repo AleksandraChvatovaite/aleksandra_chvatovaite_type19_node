@@ -77,16 +77,4 @@ function deleteItem(item) {
   console.log('tu deletini itema: ', item);
 }
 
-
-
-const shopItem = {
-  description: 'Gold bracelet with a diamond',
-  image: 'https://auksomeistrai.lt/image/cache/catalog/APYRANKES/balto-aukso-apyranke-grandinele-su-briliantu-0,03-600x600.jpg',
-  is_archived: '0',
-  item_type_id: '1',
-  price: '259.00',
-  shop_item_id: '1',
-  shop_item_name: 'Bracelet',
-};
-
 console.log('shopErr ===', shopErr);

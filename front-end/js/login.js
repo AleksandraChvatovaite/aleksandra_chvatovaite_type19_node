@@ -12,10 +12,6 @@ const els = {
 
 els.formEl.addEventListener('submit', loginToServer);
 
-// window.addEventListener('beforeunload', () => {
-//   localStorage.removeItem('loggedInUser');
-// });
-
 async function loginToServer(event) {
   event.preventDefault();
 
@@ -36,14 +32,9 @@ async function loginToServer(event) {
     console.log('response ===', response);
   }
   if (response.msg === 'Login success') {
-    // Store user information in local storage
-    // localStorage.setItem('loggedInUser',
-    // JSON.stringify({ email: data.email, role: response.userRole }));
     localStorage.setItem('loggedInUserEmail', data.email);
     localStorage.setItem('loggedInUserRole', response.userRole);
     console.log('User data stored in local storage');
     window.location = 'shop.html';
   }
 }
-
-// reikia kad jei isjungi browser issitrintu local storage
