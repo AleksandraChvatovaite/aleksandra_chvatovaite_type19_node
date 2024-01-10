@@ -4,16 +4,16 @@ const { dbConfig } = require('./config');
 async function dbQueryWithData(sql, argArr = []) {
   let conn;
   try {
-    // prisijungti prie DB
+    // jungies prie DB
     conn = await mysql.createConnection(dbConfig);
-    // atlikti veikma
+    // atlieki veiksma
     const [rows] = await conn.execute(sql, argArr);
-    // grazinti duomenis
+    // grazini duomenis
     return [rows, null];
   } catch (error) {
     return [null, error];
   } finally {
-    // atsijungti nuo DB
+    // atsijungi nuo DB
     if (conn) conn.end();
   }
 }

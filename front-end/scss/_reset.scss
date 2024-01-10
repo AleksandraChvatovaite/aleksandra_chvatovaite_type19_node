@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+body {
+  background-color: $background-color;
+  color: $primary-color;
+  font-family: 'Inter', sans-serif;
+}
+
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+a{
+  color: $primary-color;
+  text-decoration: inherit;
+}
+
+p,
+h3 {
+  margin: 0;
+}
+
+li {
+  color: $primary-color;
+}
+
+h1 {
+  padding: 1.5rem 0;
+  font-size: 2rem;
+  text-align: center;
+}

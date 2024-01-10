@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login to Deli shop</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <script src="js/login.js" type="module"></script>
+</head>
+<body>
+  <header>
+    <nav class="main-nav">
+      <ul class="nav-links">
+        <li><a href="shop.html">SHOP</a></li>
+        <li><a href="orders.html">Orders</a></li>
+      </ul>
+      <ul class="log-unlog-nav">
+        <li><a href="login.html" class="active">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <h1>Deli Shop</h1>
+    <form class="login-form">
+      <input type="email" placeholder="email" id="email">
+      <input type="password" placeholder="password" id="password">
+      <button>Login</button>
+    </form>
+    <div id="error"></div>
+  </div>
+</body>
+</html>

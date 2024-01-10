@@ -1,0 +1,171 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1rem;
+}
+
+body {
+  background-color: #F8F7E5;
+  color: #1D1D1D;
+  font-family: "Inter", sans-serif;
+}
+
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+a {
+  color: #1D1D1D;
+  text-decoration: inherit;
+}
+
+p,
+h3 {
+  margin: 0;
+}
+
+li {
+  color: #1D1D1D;
+}
+
+h1 {
+  padding: 1.5rem 0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav-links,
+.log-unlog-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+a {
+  padding: 0.8rem 1rem;
+  font-size: 1.2rem;
+}
+
+input {
+  margin: 5px 0;
+  height: 35px;
+  padding: 7px;
+}
+
+button {
+  height: 35px;
+  margin: 5px 0;
+  background-color: #FF834F;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #cf3d00;
+}
+
+div#error {
+  text-align: center;
+  color: rgb(182, 6, 6);
+  padding-top: 2rem;
+}
+
+.active {
+  color: #FF834F;
+}
+
+.btn-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.log-unlog-nav li {
+  cursor: pointer;
+}
+
+.shop-items-wrap {
+  margin: 4rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.shop-item {
+  width: 30%;
+  border: 1px solid #1D1D1D;
+  padding: 0.3rem 0.4rem;
+}
+
+.btn-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.btn-shop {
+  font-size: 1rem;
+}
+
+.login-form,
+.register-form {
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 300px;
+  padding: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.radio-input-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.input-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}/*# sourceMappingURL=main.css.map */

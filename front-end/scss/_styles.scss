@@ -1,0 +1,53 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-links,
+.log-unlog-nav {
+  display: flex;
+}
+
+a {
+  padding: 0.8rem 1rem;
+  font-size: 1.2rem;
+}
+
+input {
+  margin: 5px 0;
+  height: 35px;
+  padding: 7px;
+}
+
+button {
+  height: 35px;
+  margin: 5px 0;
+  background-color: $secondary-color;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darken($color: $secondary-color, $amount: 25%);
+}
+
+div#error {
+  text-align: center;
+  color: rgb(182, 6, 6);
+  padding-top: 2rem;
+}
+
+.active {
+  color: $secondary-color;
+}
+
+.btn-wrap {
+  display: flex;
+  justify-content: space-around;
+}
+
+.log-unlog-nav li {
+  cursor: pointer;
+}
